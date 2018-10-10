@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Add Course </title>
+</head>
+
+<script>
+"use strict";
+var Courses={}
+var averages={}
+function print() {
+	output1.innerText=" "
+	var keys = Object.keys(Courses)
+    for (var i =0; i < keys.length ; i++) {
+    	 output1. innerText=output1. innerText+ keys[i]
+    + "           "+ Courses[keys[i]][0]+"    		 " +Courses[keys[i]][1] +"\n"
+    }
+   
+
+}
+
+function maxFunc() {
+	output3.innerText=" "
+	var keys2 = Object.keys(averages)
+	var maxAverage= Math.max.apply(Math, Object.values(averages));
+	for (var i = 0; i < keys2.length; i++) {
+		if(averages[keys2[i]]==maxAverage){
+			output3.innerText =output3.innerText+ keys2[i]+"    "+maxAverage+"\n"
+		}
+	}
+	
+   }
+function avg() {
+	output2.innerText=" "
+	var keys = Object.keys(Courses)
+	var ort
+    for (var i =0; i < keys.length ; i++) {
+    	ort=(Number(Courses[keys[i]][0])+Number(Courses[keys[i]][1]))/2
+    	averages[keys[i]]=ort
+       	output2.innerText=output2.innerText+
+       	 keys[i]+"  " +ort
+    	+"\n"
+    }
+}
+function add() {
+    Courses[nameInp.value]=[midterm.value,final.value]
+ 
+}
+</script>
+
+<body>
+<h2 id=title></h2>
+
+
+<p>
+Name  &emsp;<input type=text id=nameInp   style="width:140px" > &emsp; </p>
+<p>
+Midterm <input type=number   id=midterm   style="width:140px"> 
+</p>
+<p>
+Final  &emsp; <input type=number   id=final  style="width:140px"> 
+</p>
+<p>
+<input type=button value="Add"  onClick="add()">
+</p>
+<p>
+<input type=button value="Print"  onClick="print()">
+<input type=button value="Avg"  onClick="avg()">
+<input type=button value="Max"   onClick="maxFunc()">
+</p>
+
+<hr >
+<h3> Name   Midtern  Final</h3>
+<pre id=output1></pre>
+<hr >
+<h3> Name   Average</h3>
+<pre id=output2></pre>
+<hr >
+<h3> Name   Max</h3>
+<pre id=output3></pre>
+<script>
+    title.innerText = document.title;
+    
+</script>
+
+</body>
+</html>
