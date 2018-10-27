@@ -9,7 +9,7 @@
 			}
 		}
 		class Course{
-			constructor(name, time, date, rooms){
+			constructor(name, time, date, rooms=[]){
 				this.name=name
 				this.time=time
 				this.date=date
@@ -18,4 +18,5 @@
 					return "name: "+ this.name+" time :"+this.time
 				}
 			}
-
+students=new Map()
+courses=new Map()

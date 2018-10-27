@@ -1,21 +1,83 @@
 <!DOCTYPE html>
 <html>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title> fetch</title>
+    <script src="doc.js"></script>
+    <script src="doc2.js"></script>
+    <script src="database.js"></script>
+
 </head>
 
 <script>
+    function parseStudent(line) {
+        let b = line.split("\t");
+
+        let id = b[0], name = b[1], gpa = b[2];
+        let list = [];
+        for (let i=3; i<b.length; i++) 
+            list.push(b[i]);
+        return new Student(id, name, gpa, list);
+    }
+    function addStudents(txt) {
+        let a = txt.split("\n");
+        for (let s of a) {
+          let std = parseStudent(s);
+          students.set(std.id,std)
+      }
+
+  }
+  function parseCourse(line) {
+    let b = line.split("\t");
+    let name = b[0], time = b[1], date = b[2];
+    let list = [];
+    for (let i=3; i<b.length; i++) 
+        list.push(b[i]);
+    return new Course(name,time, date, list);
+}
+function addCourse(txt) {
+    let a = txt.split("\n");
+    for (let s of a) {
+      let course = parseCourse(s);
+      courses.set(course.name,course)
+  }
+
+}
 function read(){
-    fetch("a.txt").
-    then(function(r){
-      console.log(r)  
-    } )
-    output1.innerText =123
+    addStudents(studentText)
+    addCourse(courceText)
+        //output1.innerText =studentText
+        // output1.innerText =courceText
+       // fetch("https://github.com/maeyler/JS/blob/master/data/Students.txt")
+        /*fetch("https://github.com/Maya-Karahbala/advancedpro/blob/master/odev2/a.txt")
+           .then(function (resp) {
+            return  resp.text()})
+           .then(function (data) {
+            console.log(data) })*/
+        //   .then (data => output1.innerText =data)
+       // then(r=> console.log(r.text()))
+       
+   }
+   function setMesg(msg){
+    output1.innerHTML +=  msg+"<br>" ;
+}
+   function search(){
+    let stu
+    for (k of students.keys()){
+        if (k == idInp.value){
+            stu=students.get(idInp.value)
+            nameInp.value=stu.name
+            gpaInp.value=stu.gpa
+            CoursesInp.value = stu.courses.toString()
+            return
+    }
+}
+setMesg("Student Not Found")
 }
 
-   
 
 
 
@@ -23,22 +85,35 @@ function read(){
 </script>
 
 <body>
-<h2 id=title></h2>
+    <h2 id=title></h2>
+    <p>
+        Id  &emsp;<input type=text id=idInp   style="width:140px" > &emsp; 
+        <input type=button value="Search"  onClick="search()">
+    </p>
+    <p>
+        Name <input type=text   id=nameInp   style="width:140px"> 
+    </p>
+    <p>
+        GPA  &emsp; <input id=gpaInp type=text   id=final  style="width:140px"> 
+    </p>
+    <p>
+        Courses  &emsp; <input type=text  id=CoursesInp  style="width:400px"> 
+    </p>
 
 
+    <p>
+        <input type=button value="read"  onClick="read()">
+    </p>
 
-<p>
-<input type=button value="read"  onClick="read()">
-</p>
+    <hr >
+    <h3> result</h3>
+    <pre id=output1></pre>
 
-<hr >
-<h3> result</h3>
-<pre id=output1></pre>
+    <script>
+        title.innerText = document.title;
+        read()
 
-<script>
-    title.innerText = document.title;
-    
-</script>
+    </script>
 
 </body>
 </html>
