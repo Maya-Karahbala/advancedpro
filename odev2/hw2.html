@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title> fetch</title>
+</head>
+
+<script>
+function read(){
+    fetch("a.txt").
+    then(function(r){
+      console.log(r)  
+    } )
+    output1.innerText =123
+}
+
+   
+
+
+
+
+</script>
+
+<body>
+<h2 id=title></h2>
+
+
+
+<p>
+<input type=button value="read"  onClick="read()">
+</p>
+
+<hr >
+<h3> result</h3>
+<pre id=output1></pre>
+
+<script>
+    title.innerText = document.title;
+    
+</script>
+
+</body>
+</html>
