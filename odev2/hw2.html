@@ -21,7 +21,7 @@
 
 function search(){
     output1.innerText=""
-    find=findStudent(idInp.value)
+    find=fillStudentFields(idInp.value)
     if(!find){
         clearAll()
         setMesg("Student Not Found")
@@ -41,21 +41,20 @@ function getStudent(givenId){
          }
     return -1
 }
-function findStudent(givenId){// fill Text Filds and return true if 
-                              // student is found else return false
-    for (stu of students.values()){
-        if (stu.id == givenId){
-             nameInp.value=stu.name
-             gpaInp.value=stu.gpa
-             CoursesInp.value = stu.courses.toString()
-             return true
-              }
-         }
-     return false
+function fillStudentFields(givenId){
+    let stu=getStudent(givenId)
+    if(stu!=-1){
+        nameInp.value=stu.name
+        gpaInp.value=stu.gpa
+        CoursesInp.value = stu.courses.toString()
+        return true
+    }
+    return false    
 }
 function randStu(){
     idInp.value=students.get(getRandomInt(students.size)).id
-     findStudent(idInp.value)
+     search(idInp)
+
      }
 function NoOfStu(){
     if(gpaInp.value){// gpa boş değilse
@@ -86,7 +85,40 @@ function MumOfcoursesInRoom(){
     output1.innerText="Number of courses in "+roomInp.value+"  is  "+num
 }
 function ExamSchedule(){
+output1.innerText=""
+stu=getStudent(idInp.value)
+for(course of stu.courses){
+    for(c of courses.values()){
+        if(course==c.name){
+            output1.innerHTML +=  c.name+"  "+c.time+"  "+ c.date+"<br>" ;
 
+        }
+    }
+
+
+}
+}
+function printStudentList(){//students who take given course
+output1.innerText=""
+
+for (stu of students.values()){
+    for (c of stu.courses){
+         if(courseInp.value ==c)
+        output1.innerHTML +=  stu.id+"  "+stu.name+"<br>" ;
+    }
+   
+}
+}
+function studentNoTakingCourse(){
+    counter=0
+ for (stu of students.values()){
+    for (c of stu.courses){
+         if(courseInp.value ==c)
+         counter++
+    }
+   
+}
+output1.innerText="Number of student taking "+courseInp.value+" is "+counter
 }
 </script>
 
@@ -123,6 +155,16 @@ function ExamSchedule(){
         <input type=button value="Courses in this room"  onClick="coursesInRoom()">
         <input type=button value="Number of Courses in this room"  onClick="MumOfcoursesInRoom()">
     </p>
+
+
+  <p>
+        course  &emsp;<input type=text id=courseInp   style="width:140px" > &emsp; 
+        <input type=button value="Student list taking this course"  onClick="
+        printStudentList()">
+          <input type=button value="Number of Student  taking this course"  onClick="
+        studentNoTakingCourse()">
+    </p>
+
     <hr >
     <h3> result</h3>
     <pre id=output1></pre>
