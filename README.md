@@ -13,7 +13,7 @@ JavaScript  examples
 <a href="https://maya-karahbala.github.io/advancedpro/index.html">CW4</a>
   </li>
     <li>
-<a href="https://maya-karahbala.github.io/advancedpro/odev2/database.html">HW'</a>
+<a href="https://maya-karahbala.github.io/advancedpro/odev2/database.html">HW2</a>
   </li>
 
 
