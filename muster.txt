@@ -1,0 +1,3 @@
+kalem 5 100
+silgi 9 20
+cetvel 8 10
