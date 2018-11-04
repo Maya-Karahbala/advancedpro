@@ -18,52 +18,65 @@
 					return "name: "+ this.name+" time :"+this.time
 				}
 			}
-      students=new Map()
-      courses=new Map()
-      function parseStudent(line) {
-        let b = line.split("\t");
+      class Database{
+        constructor(){
+          this.students=new Map()
+          this.courses=new Map()
 
-        let id = b[0], name = b[1], gpa = b[2];
-        let list = [];
-        for (let i=3; i<b.length; i++) 
-          list.push(b[i]);
-        return new Student(id, name, gpa, list);
-      }
-      function addStudents(txt) {
+
+        }
+
+        
+        addStudents(txt) {
+         function   parseStudent(line) {
+          let b = line.split("\t");
+
+          let id = b[0], name = b[1], gpa = b[2];
+          let list = [];
+          for (let i=3; i<b.length; i++) 
+            list.push(b[i]);
+          return new Student(id, name, gpa, list);
+        }
+
         let a = txt.split("\n");
+        let std
         for (var i = 0; i < a.length; i++) {
-          let std = parseStudent(a[i]);
-          students.set(i,std)
-        }
+         std = parseStudent(a[i]);
+         students.set(std.id,std)
+       }
 
 
-      }
+     }
+     
+     
+     
+     addCourses(txt) {
       function parseCourse(line) {
-        let b = line.split("\t");
-        let name = b[0], time = b[1], date = b[2];
-        let list = [];
-        for (let i=3; i<b.length; i++) 
-          list.push(b[i]);
-        return new Course(name,time, date, list);
-      }
-      function addCourses(txt) {
-        let a = txt.split("\n");
-        for (let s of a) {
-          let course = parseCourse(s);
-          courses.set(course.name,course)
-        }
+       let b = line.split("\t");
+       let name = b[0], time = b[1], date = b[2];
+       let list = [];
+       for (let i=3; i<b.length; i++) 
+         list.push(b[i]);
+       return new Course(name,time, date, list);
+     }
+     let a = txt.split("\n");
+     let course
+     for (let s of a) {
+      course = parseCourse(s);
+      courses.set(course.name,course)
+    }
 
-      }
-function read(){
+  }
+  read(){
   //reading students data
   fetch("https://maeyler.github.io/JS/data/Students.txt")
   .then(r => r.text())
-  .then(addStudents);
+  .then(this.addStudents);
    // reading courses data
    fetch("https://maeyler.github.io/JS/data/Courses.txt")
    .then(r => r.text())
-   .then(addCourses);  
+   .then(this.addCourses);  
  }
- function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
 }
+
+
