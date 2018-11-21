@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Make a Table </title>
+</head>
+
+<script>
+"use strict";
+ var students = [
+    ["Name","LastName","Number","gpa"],
+    ["Ahmet","Ak",152134,2],
+    ["selim","Ak",152122,3],
+    ["Ayşe","Ak",152100,4],
+     ["ali","Ak",152108,3]
+  ];
+
+
+function makeTablo(array) {
+ let text=""
+ let rowCount=array.length
+ let columCount=array[0].length
+ // columalrın isimleri 
+ text+="<tr>"
+   for (let j = 0; j < columCount; j++) {
+          text+="<th>"+array[0][j]+"</th>"
+       }
+  text+="</tr>"
+// dataları okuma
+ for ( let i = 1; i < rowCount; i++) {
+       text+="<tr>"
+      for ( let j = 0; j < columCount; j++) {
+          text+="<td>"+array[i][j]+"</td>"
+       }
+       text+="</tr>"
+ }
+tablo.innerHTML = "<table border=1>"+ text +"</table>"
+}
+
+</script>
+
+<style>
+    table { border-collapse: collapse; }
+    th { color: blue; padding: 5px 5px; }
+    td { 
+        border: 1px solid blue; 
+        padding: 5px 5px; 
+        text-align: center; 
+    }
+    td:hover .tip { visibility: visible; }
+    .tip {
+        visibility: hidden;
+        font-size: small;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 5px 5px;
+        position: absolute;
+    }
+</style>
+
+<body>
+<center>
+<h2 id=title></h2>
+
+
+
+<table id="tablo"></table>
+
+
+<hr />
+<b>Sample code</b>
+<pre id=sample></pre>
+<hr />
+
+<script>
+    title.innerText = document.title;
+    sample.innerText = makeTablo.toString();
+    makeTablo(students)
+</script>
+
+</body>
+</html> 
