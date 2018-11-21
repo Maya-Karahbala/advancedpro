@@ -1,14 +1,30 @@
 <html lang="en-US">
-<link rel="manifest" href="manifest.json">
-<script >
-  navigator.serviceWorker.register('advancedpro/cw7/sw.js')
-</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Örnekleri </title>
+    <link rel="manifest" href="manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register(' https://maya-karahbala.github.io/advancedpro/cw7/sw.js')
+        .then((reg) => { console.log('SW Registered', reg) })
+        .catch(console.log)
+    }
+  </script>
+  <style>
+    h3 { padding: 12px 0 0 20px; }
+    p  { padding: 0 0 0 20px; }
+    li { padding: 3px; }
+  </style>
+</head>
+
+
 <body>
+
+
 <li>
-<a href="https://maya-karahbala.github.io/advancedpro/Array%20Demo.html">CW2</a>
-  </li>
-<li>
-<a href="https://maya-karahbala.github.io/advancedpro/hw1.html">HW1</a>
+<a href="https://maya-karahbala.github.io/advancedpro/hw1.html">HW3</a>
   </li>
 <li>
 <a href="https://maya-karahbala.github.io/advancedpro/cw7/tablo.html">CW7</a>
