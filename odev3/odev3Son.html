@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Read local file </title>
+	<p id=out> h3</p>	
+</head>
+
+
+
+<script>
+	function moveIt(box){
+	if((box.position+1)>2) box.position=0
+    else box.position++;
+    box.style.transitionDuration='1s';
+    box.style.transform ="translateX("+box.boxPositions[box.position]+"px)" 
+	}
+function moveItback(box){
+    if((box.dist-300)>-1) box.dist-=300
+    else box.dist=600
+    box.style.transitionDuration='2s';
+    box.position=boxPositions.indexOf(box.dist);
+    box.style.transform ="translateX("+box.dist+"px)" 
+    
+	}
+function moveDown(box){
+		var moveToLeft =document.getElementById(box.id).animate(
+			{ transform: ["translateY(0)", "translateY(-200px)","translateY(0)"] }, { 
+				duration: 3000, 
+				easing: 'ease-in-out', 
+				fill: 'both'
+			});
+	}
+	function moveto(box,position){
+	box.position=position
+	box.style.transitionDuration='1s';
+    box.style.transform ="translateX("+box.boxPositions[position]+"px)" 
+	}
+function swap1and2(){
+	let randfrom=Math.round(Math.random() * (2 - 0))
+
+	let randto=Math.round(Math.random() * (2 - 0))
+	while(randfrom==randto)randto=Math.round(Math.random() * (2 - 0))
+	let b,b1,b2
+    for(b of boxes){
+ 	if(b.position==randfrom)b1=b
+ 	else if(b.position==randto)b2=b
+     }
+  moveto(b2,randfrom)
+  moveto(b1,randto)
+}
+function control(box){
+	let boxesIdes=["box1","box2","box3"]
+	console.log(boxesIdes.indexOf(box.id))
+	if(ranPos==boxesIdes.indexOf(box.id)){
+		console.log("kazandın")
+		youwin.style.visibility="visible"
+	}
+
+
+}
+
+	</script>
+
+	<style>
+	.thumb {
+		width: 400px;
+		border: 1px solid #000;
+		margin: 10px 5px 0 0;
+	}
+</style>
+
+<body background="bg.png" >
+	<h2 id=title ></h2>
+
+	
+
+	<div> 
+		<div id=box1>
+		<img  src="box.png" style="width:230px;height:230px;  margin-left:240px;margin-top: 150px; 
+		 position:absolute ; draggable="false" onClick="control(box1)" >
+		 </div>
+		<div id=box2>
+		<img  src="box.png" style="width:230px;height:230px;   margin-left:530px ;margin-top: 150px; 
+		position:absolute ; draggable="false" onClick="control(box2)"  >
+		</div>
+		<div id=box3>
+		<img  src="box.png" style="width:230px;height:230px;   margin-left:810px;margin-top: 150px;
+		position:absolute ; draggable="false" onClick="control(box3)"  >
+		</div>
+		<div style= margin-top: 400px>
+		<img  id=rabiit src="image.png" style="width:160px;height:160px; 
+		 position:absolute ; draggable="false"   >
+		</div>
+		
+	</div>
+	<div >
+		<img  id= youwin src="youwin.png" style="width:230px;height:230px; visibility:hidden;  
+		  >
+		</div>
+	
+	
+	<!--cop"-->
+	<script>
+
+		title.innerText = document.title;
+		box1.position=0;
+		box2.position=1;
+		box3.position=2;
+		box1.boxPositions=[0,300,600]
+		box2.boxPositions=[-300,0,300]
+		box3.boxPositions=[-600,-300,0]
+		var ranPos=Math.round(Math.random() * (2 - 0))
+		//let positions=["70px","350px","630px"]
+		let positions=["270px","550px","830px"]
+
+		rabiit.style.marginLeft= positions[ranPos];
+		var boxes=[box1,box2,box3]
+
+		 var walking= document.getElementById("rabiit").animate([ 
+			  { transform: 'rotate(20deg)' }, 
+			  { transform: 'rotate(-40deg)' }
+			], {
+			  easing: 'steps(2, end)',
+			  iterations: Infinity,
+			  direction: 'alternate',
+			  duration: 1000
+			});
+
+		//moveDown(document.getElementById("box"+"1")
+		//moveDown(boxes[ranPos])
+	     /*swap1and2().delay(500)
+	     swap1and2().delay(500)
+	     swap1and2().delay(500)*/
+		setTimeout(function(){rabiit.style.visibility = "hidden"},6000);
+       // moveDown(boxes[ranPos])
+	     setTimeout(function(){
+			swap1and2();
+			setTimeout(function(){
+				swap1and2();
+				setTimeout(function(){
+					swap1and2();
+					setTimeout(function(){
+					swap1and2();
+					setTimeout(function(){
+					swap1and2();
+					setTimeout(function(){
+					swap1and2();
+					setTimeout(function(){
+					swap1and2();
+					setTimeout(function(){
+					swap1and2();
+				     },1000);
+				     },1000);
+				     },1000);
+				     },1000);
+				     },1000);
+				},1000);
+			},1000);
+		},7000);
+		//swap1and2()
+		//swap1and2()
+	    /*for(let i=0 ;i<15;i++){
+            swap1and2()
+       
+        }*/
+
+
+
+
+
+					</script>
+
+				</body>
+				</html>
