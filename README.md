@@ -21,6 +21,9 @@
      <li>
 <a href="https://maya-karahbala.github.io/advancedpro/cw6/Timing.html">CW6</a>
   </li>
+      <li>
+<a href="https://maya-karahbala.github.io/advancedpro/cw7/app.html">CW7</a>
+  </li>
 
 </body>
 </html>
