@@ -1,7 +1,7 @@
 <html lang="en-US">
 <body>
 <li>
-<a href="https://maya-karahbala.github.io/advancedpro/Array%20Demo.html">CW2</a>
+<a href="https://maya-karahbala.github.io/advancedpro/CW/cw2/Array%20Demo.html">CW2</a>
   </li>
 <li>
 <a href="https://maya-karahbala.github.io/advancedpro/HW/odev1/hw1.html">HW1</a>
@@ -19,10 +19,10 @@
 <a href="https://maya-karahbala.github.io/advancedpro/cw5.html">CW5</a>
   </li>
      <li>
-<a href="https://maya-karahbala.github.io/advancedpro/cw6/Timing.html">CW6</a>
+<a href="https://maya-karahbala.github.io/advancedpro/CW/cw6/Timing.html">CW6</a>
   </li>
       <li>
-<a href="https://maya-karahbala.github.io/advancedpro/cw7/app.html">CW7</a>
+<a href="https://maya-karahbala.github.io/advancedpro/CW/cw7/app.html">CW7</a>
   </li>
      <li>
 <a href="https://maya-karahbala.github.io/advancedpro/HW/odev3/odev3Son.html">HW3</a>
