@@ -7,7 +7,7 @@
 <a href="https://maya-karahbala.github.io/advancedpro/HW/odev1/hw1.html">HW1</a>
   </li>
 <li>
-<a href="https://maya-karahbala.github.io/advancedpro/CW/cw3/inspector.html">CW3</a>
+<a href="https://maya-karahbala.github.io/advancedpro/CW/cw3/c4_data.html">CW3</a>
   </li>
   <li>
 <a href="https://maya-karahbala.github.io/advancedpro/CW/cw4/index2.html">CW4</a>
