@@ -16,7 +16,7 @@
 <a href="https://maya-karahbala.github.io/advancedpro/HW/odev2/database.html">HW2</a>
   </li>
     <li>
-<a href="https://maya-karahbala.github.io/advancedpro/cw5.html">CW5</a>
+<a href="https://maya-karahbala.github.io/advancedpro/CW/cw5/cw5.html">CW5</a>
   </li>
      <li>
 <a href="https://maya-karahbala.github.io/advancedpro/CW/cw6/Timing.html">CW6</a>
