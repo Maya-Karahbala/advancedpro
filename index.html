@@ -1,5 +1,14 @@
 <html lang="en-US">
-
+<link rel="manifest" href="manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register(' https://maya-karahbala.github.io/advancedpro/sw.js')
+        .then((reg) => { console.log('SW Registered', reg) })
+        .catch(console.log)
+    }
+  </script>
+<body>
 <li>
 <a href="https://maya-karahbala.github.io/advancedpro/CW/cw2/Array%20Demo.html">CW2</a>
   </li>
