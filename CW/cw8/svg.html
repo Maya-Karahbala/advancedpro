@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script>
+ const t = { transform: ["translateY(0)","translateY(-100px)", "translateY(-200px)","translateY(0)"] }
+      
+function moveright() {
+ if(menu.selectedIndex==0)
+ circle1.cx.baseVal.value+=10
+else if(menu.selectedIndex==1)
+ rect1.x.baseVal.value+=10
+
+} 
+function moveleft() {
+ if(menu.selectedIndex==0)
+ circle1.cx.baseVal.value-=10
+else if(menu.selectedIndex==1)
+ rect1.x.baseVal.value-=10
+ 
+
+}
+function zoomIn() {
+ circle1.r.baseVal.value+=10
+
+}
+function zoomOut() {
+ circle1.r.baseVal.value-=10
+
+}
+function changeColor() {
+ circle1.style.fill=color.value
+
+}
+function changeStroke() {
+circle1.style.strokeWidth+=1
+
+}
+function moveUp() {
+ if(menu.selectedIndex==0)
+ circle1.animate(t,200)
+else if(menu.selectedIndex==1)
+ rect1.animate(t,200)
+
+}
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SVG  </title>
+
+  <style>
+    svg {
+        background: SeaGreen ;
+        font: 10px arial, sans-serif;
+    }
+  </style>
+</head>
+
+<select id ="menu">
+  <option value="circle1">Circle</option>
+  <option value="rect1">Rectangle</option>
+</select>
+
+
+<body>
+<button type="button" onclick="moveright()">move  right</button>
+<button type="button" onclick="moveleft()">move  left</button>
+<button type="button" onclick="moveUp()">move up</button>
+<p></p>
+<button type="button" onclick="zoomIn()">Zoom in</button>
+<button type="button" onclick="zoomOut()">Zoon out</button>
+<input type="color" value="#ff0000" id=color onchange="changeColor()">
+<button type="button" onclick="changeStroke()">stroke width</button>
+
+
+
+
+
+<h2>Using SVG</h2>
+
+
+
+
+
+<svg id='svg' width='740' height='740'>
+  <circle id="circle1"cx='250' cy='350' r='40'
+  style='fill:yellow;stroke:blue;stroke-width:4' />
+  <rect id="rect1" x='200' y='150' width='100' height='80'
+  style='fill:pink;stroke:red;stroke-width:5' />
+</svg>
+<p>SVG elements are controllable and scalable</p>
+
+<pre id=sample></pre>
+
+<hr />
+
+<p>Ref: <i>Eloquent JavaScript</i>,
+<a href="http://eloquentjavascript.net/17_canvas.html" 
+   target="ExternalDocument"> Chap 17</a>
+</p>
+
+<script>
+
+  
+circle1=document.getElementById("circle1")
+rect1=document.getElementById("rect1")
+color=document.getElementById("color")
+menu=document.getElementById("menu")
+   
+</script>
+
+</body>
+</html>
