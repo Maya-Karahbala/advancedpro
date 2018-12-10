@@ -1,0 +1,23 @@
+canvas{
+	
+position: relative;
+
+}
+#box1 {
+	background-image: url("pictures/box.png");
+    width:230px;
+    height:230px
+}
+#picture {
+    position: relative;
+}
+
+
+.blob, .blob1, .blob2 {
+	background-image: url("pictures/box.png");
+    position: absolute;
+    width: 230px;
+    height: 230px;
+
+}
+

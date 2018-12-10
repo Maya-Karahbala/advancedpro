@@ -30,7 +30,7 @@ ctx.lineTo(300,214*3)
 ctx.stroke();
 // second horizantal line
 ctx.moveTo(0,214*2)
-ctx.lineTo(900,214*2)
+ctx.lineTo(600,214*2)
 ctx.stroke();
 ///////////////////
 
