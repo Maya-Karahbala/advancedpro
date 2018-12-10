@@ -1,23 +1,21 @@
-canvas{
-	
-position: relative;
-
-}
-#box1 {
-	background-image: url("pictures/box.png");
-    width:230px;
-    height:230px
-}
-#picture {
-    position: relative;
+.back{
+    background-image:url(images/bg.png);
+    background-repeat: no-repeat;
+    background.position: center,center;
+    background-size: cover;
+    width:100%;
+    height:650px;
+    
 }
 
-
-.blob, .blob1, .blob2 {
-	background-image: url("pictures/box.png");
-    position: absolute;
-    width: 230px;
-    height: 230px;
-
-}
-
+.box {
+     background-image: url(box.png);
+     width:250px;
+     height:250px; 
+     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    position:  absolute;
+    margin-top: 300px; 
+  }
