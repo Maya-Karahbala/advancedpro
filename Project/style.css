@@ -34,7 +34,7 @@
   }
 .button {
   background-color: Transparent;
-  width:250px;
+  width:305px;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -43,8 +43,6 @@
   display: inline-block;
   font-size: 16px;
   margin: 8px 8px;
-  
-  
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;

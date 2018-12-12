@@ -4,7 +4,10 @@ var positions=[0,300,600,900]
 var duration
 var bekleme
 var firstBox
-
+var numberOfSwap
+var cycleNo=0
+var ranPos
+var ball=document.getElementById("ball1")
 
 let boxName;
 for (let i = 0; i <4; i++) {
@@ -18,9 +21,8 @@ boxes[1].boxPositions=[-300,0,300,600]
 boxes[2].boxPositions=[-600,-300,0,300]
 boxes[3].boxPositions=[-900,-600,-300,0]
 // random number between 3 amd 0 for random positon of top
-var ranPos
-var ball=document.getElementById("ball1")
-ball.style.marginLeft= (positions[ranPos]+80)+"px";
+
+//ball.style.marginLeft= (positions[ranPos]+80)+"px";
 //ball.style.transform ="translateX("+positions[ranPos]+"px)"
 
 function moveBoxUp(box){
@@ -49,11 +51,12 @@ function moveUpDown(box){
 	}
 	function moveBallToStartPoint(){
        // ball.style.marginLeft= boxes[ranPos].boxPositions[ranPos]+"px";
-		ball.style.transform ="translateX("+boxes[ranPos].boxPositions[boxes[ranPos].position]+"px)"
+		ball.style.transform ="translateX("+positions[boxes[ranPos].position]+"px)"
 	}
 	function moveBallTo(position){
       //  ball.style.marginLeft= boxes[ranPos].boxPositions[boranPosxes[ranPos].position]+"px";
-		ball.style.transform ="translateX("+boxes[ranPos].boxPositions[position]+"px)"
+		//ball.style.transform ="translateX("+boxes[ranPos].boxPositions[position]+"px)"
+		ball.style.transform ="translateX("+positions[position]+"px)"
 	}
 	function swap(){
 		let randfrom=Math.round(Math.random() * (3 - firstBox))+firstBox
@@ -69,8 +72,7 @@ function moveUpDown(box){
 		moveto(b1,randto)
 	}
 
-	var numberOfSwap
-	var cycleNo=0
+
 	function multipleSwap(){
 		if(cycleNo<numberOfSwap){
 			setTimeout(function(){
@@ -78,10 +80,6 @@ function moveUpDown(box){
 				cycleNo++
 				multipleSwap()
 			},bekleme);
-		}
-		else{
-			moveBallToStartPoint()
-			return;
 		}
 	}
 	function reset(){
@@ -93,8 +91,8 @@ function moveUpDown(box){
  					}
  					
  						ranPos=Math.round(Math.random() * (3 - firstBox))+firstBox
- 						//moveBallTo(ranPos)
- 					   // ball.style.marginLeft= (positions[ranPos]+80)+"px";
+ 						moveBallTo(ranPos)
+ 					    //ball.style.marginLeft= (positions[ranPos]+80)+"px";
  					  // boxes[ranPos].boxPositions[ranPos]
                         //  ball.style.marginLeft= boxes[ranPos].boxPositions[ranPos]+"px";
                    
@@ -110,17 +108,15 @@ function moveUpDown(box){
  		
  		setTimeout(function(){
  			ball.style.visibility = "visible"
- 		    console.log("resetten çıktı")
  			moveBoxUp(boxes[ranPos])
  			setTimeout(function(){
  				moveBoxDown(boxes[ranPos])
- 				setTimeout(function(){
- 					//ball.style.visibility = "hidden"
  					setTimeout(function(){
+ 						//ball.style.visibility = "hidden"
  						cycleNo=0
  						multipleSwap()
+
  					},1000);
- 				},1000);
  			},1000);
  		},1000);
  
@@ -136,11 +132,12 @@ function easyGame(){
 	
 }
 function medGame(){
-	boxes[0].style.visibility = "visible"
+    
 	duration='1s'
 	bekleme=1000
 	numberOfSwap=10
 	firstBox=0
+	boxes[0].style.visibility = "visible"
 	newGame()
 	
 }
@@ -152,4 +149,17 @@ function hardGame(){
 	firstBox=0
 	newGame()
 	
+}
+function control(selectedBox){
+	moveBallToStartPoint()
+	if(ranPos==selectedBox){
+		ball.style.visibility = "visible"
+		moveBoxUp(boxes[ranPos])
+		console.log("you win")
+	}
+	else{
+		console.log("game over")
+	}
+
+
 }
