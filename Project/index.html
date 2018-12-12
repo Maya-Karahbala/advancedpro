@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html>z
 <head>
 	<title></title>
 	<meta charset="UTF-8">
@@ -7,16 +7,22 @@
 	
 </head>
 <body class=back  >
-	    <div>
-	     <div id=ball1 class=ball ></div>
-	    </div>
-	<div  >
-		<div id=box0 class=box style="margin-left: 0px "></div>
+
+	<div> 
+		<div id=ball1 class=ball ></div>
+		<div id=box0 class=box style="margin-left: 0px; visibility: hidden;"></div>
 		<div id=box1 class=box style="margin-left:300px"></div>
 		<div id=box2 class=box style="margin-left:600px"></div>
 	    <div id=box3 class=box style="margin-left:900px"></div>
+	    	
+	     
 	</div>
-	 
+	   <div style="margin-left: 100px"> 
+	   <button id=level1 class=" button level1" onClick="easyGame()">EASY</button>  
+	   <button id=level2 class=" button level2" onClick="medGame()">MEDIUM</button>
+	   <button id=level3 class=" button level3" onClick="hardGame()">HARD</button>
+	   <div> 
+	    
 <script src ="script.js"></script>	
 </body>
 </html>
