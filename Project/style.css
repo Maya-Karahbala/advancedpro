@@ -32,6 +32,14 @@
     margin-top: 430px; 
     
   }
+  .gameOvaer  {
+    width:600px;height:200px; 
+     position:absolute ;visibility: hidden; margin-top: -230px;margin-left: 460px;
+  }
+   .youWin {
+    width:400px;height:200px; 
+     position:absolute ;visibility: hidden; margin-top: -230px;margin-left: 560px;
+  }
 
 .level1 {
   color: black; 
@@ -66,6 +74,7 @@
   color: white;
 }
 .ghost-button-thick-border {
+
   display: inline-block;
   width:250px;
    height:30px; 
@@ -75,7 +84,7 @@
   text-align: center;
   outline: none;
   text-decoration: none;
-  transition: background-color 0.2s ease-out,
+  transition: background-color 0.5s ease-out,
   color 0.2s ease-out;
   cursor: pointer;
 }

@@ -7,6 +7,7 @@
 	
 </head>
 <body class=back  >
+	  
 	 <div>
 	     <div id=ball1 class=ball style="margin-left: 80px; visibility: hidden;" ></div>
 	    </div>   
@@ -17,11 +18,16 @@
 		<div id=box2 class=box  onClick="control(2)"style="margin-left:600px"></div>
 	    <div id=box3 class=box onClick="control(3)" style="margin-left:900px"></div>
 	</div>
-	<div style="margin-left: 60px; margin-top: 40px; "> 
-	   <a id=level1 class=" ghost-button-thick-border level1" onClick="easyGame()">EASY</a>  
-	   <a id=level2 class=" ghost-button-thick-border level2" onClick="medGame()">MEDIUM</a>
-	   <a id=level3 class=" ghost-button-thick-border level3" onClick="hardGame()">HARD</a>
+
+	<div style="margin-left: 60px; margin-top: 40px;  "> 
+	   <a id=level1 class=" ghost-button-thick-border level1" onClick="easyGame()">EASY</a> <p></p> 
+	   <a id=level2 class=" ghost-button-thick-border level2" onClick="medGame()">MEDIUM</a><p></p> 
+	   <a id=level3 class=" ghost-button-thick-border level3" onClick="hardGame()">HARD</a><p></p> 
 	   </div> 
+	
+		<img  id=gameOvaer src="gameOver.png" class=gameOvaer  >
+		<img  id=youWin src="youWin.png" class=youWin  >
+		
 <script src ="script.js"></script>	
 </body>
 </html>

@@ -10,6 +10,9 @@ var ranPos
 var finish=false// for control only one time after game terminated
 var start=true// for prevent starting next game before finishing the first 
 var ball=document.getElementById("ball1")
+var gameOvaer=document.getElementById("gameOvaer")
+var youWin=document.getElementById("youWin")
+
 
 let boxName;
 for (let i = 0; i <4; i++) {
@@ -79,15 +82,19 @@ function moveBallToStartPoint(){
 		    }
 	}
 	function reset(){
-
  					for (let i = 0; i <4; i++) {
  						moveto(boxes[i],i)
  					}
  					ranPos=Math.round(Math.random() * (3 - firstBox))+firstBox
  					moveBallTo(ranPos)
-
+         
  				}
-
+function hideControlImages(){
+   youWin.style.transitionDuration='0s';
+    gameOvaer.style.transitionDuration='0s';
+ gameOvaer.style.visibility = "hidden"
+ youWin.style.visibility = "hidden"
+}
    //start the game
    function newGame(){
 
@@ -110,8 +117,10 @@ function moveBallToStartPoint(){
 
    }
    function easyGame(){
+    hideControlImages()
     if(start) { 
-    start=false  
+    start=false 
+    boxes[0].style.transitionDuration='0s'; 
    	boxes[0].style.visibility = "hidden"
    	duration='1s'
    	bekleme=1000
@@ -121,6 +130,7 @@ function moveBallToStartPoint(){
     }
    }
    function medGame(){
+    hideControlImages()
     if(start){
     start=false
    	duration='1s'
@@ -132,6 +142,7 @@ function moveBallToStartPoint(){
     }
    }
    function hardGame(){
+    hideControlImages()
     if(start){
     start=false
    	boxes[0].style.visibility = "visible"
@@ -159,6 +170,10 @@ function moveBallToStartPoint(){
    		//moveto(boxes[ranPos],boxes[ranPos].position)
    		moveBoxUp(boxes[selectedPos])
    		console.log("you win")
+      //alert('You won the game, congratulations!');
+      youWin.style.visibility = "visible"
+      youWin.style.transitionDuration='1s';
+      youWin.style.transform = "scaleY(2)";
    	}
    	else{
    		for (let i = 0; i <4; i++) {
@@ -168,6 +183,10 @@ function moveBallToStartPoint(){
    		}
    		moveBoxUp(boxes[selectedPos])
    		console.log("game over")
+      //alert('You won the game, congratulations!');
+      gameOvaer.style.visibility = "visible"
+      gameOvaer.style.transitionDuration='1s';
+      gameOvaer.style.transform = "scaleY(2)";
    	}
    	finish=false
    console.log("control kapalı ")
