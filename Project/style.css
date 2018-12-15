@@ -1,5 +1,5 @@
 .back{
-    background-image:url(bg.png);
+    background-image:url(Pictures/bg.png);
     background-repeat: no-repeat;
     background.position: center;
     background-size: cover;
@@ -9,7 +9,7 @@
 }
 
 .box {
-     background-image: url(box.png);
+     background-image: url(Pictures/box.png);
      width:250px;
      height:250px; 
      background-size: contain;
@@ -21,7 +21,7 @@
     margin-left: 0px
   }
   .ball {
-     background-image: url(ball.png);
+     background-image: url(Pictures/ball.png);
      width:100px;
      height:100px; 
      background-size: contain;

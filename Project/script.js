@@ -158,35 +158,43 @@ function hideControlImages(){
    	moveBallToStartPoint()
    	let selectedPos=boxes[selectedBox].position
    	if(ranPos==selectedBox){
-   		
-   		//
+     		//
    		for (let i = 0; i <4; i++) {
+        console.log("girdi")
    			boxes[i].position=i
    			boxes[i].style.transitionDuration="0s";
    			boxes[i].style.transform ="translateX("+boxes[i].boxPositions[i]+"px)" 
    		}
    		//
-   		ball.style.visibility = "visible"
-   		//moveto(boxes[ranPos],boxes[ranPos].position)
-   		moveBoxUp(boxes[selectedPos])
-   		console.log("you win")
+      setTimeout(function(){
+      ball.style.visibility = "visible"
+      //moveto(boxes[ranPos],boxes[ranPos].position)
+       console.log("move basladı")
+      moveBoxUp(boxes[selectedPos])
+      console.log("you win")
       //alert('You won the game, congratulations!');
       youWin.style.visibility = "visible"
       youWin.style.transitionDuration='1s';
       youWin.style.transform = "scaleY(2)";
+      },500);
+   	
    	}
    	else{
    		for (let i = 0; i <4; i++) {
+         console.log("girdi")
    			boxes[i].position=i
    			boxes[i].style.transitionDuration="0s";
    			boxes[i].style.transform ="translateX("+boxes[i].boxPositions[i]+"px)" 
    		}
+      setTimeout(function(){
    		moveBoxUp(boxes[selectedPos])
    		console.log("game over")
       //alert('You won the game, congratulations!');
       gameOvaer.style.visibility = "visible"
       gameOvaer.style.transitionDuration='1s';
       gameOvaer.style.transform = "scaleY(2)";
+      },500);
+
    	}
    	finish=false
    console.log("control kapalı ")
