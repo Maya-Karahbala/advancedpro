@@ -154,6 +154,7 @@ function hideControlImages(){
     }
    }
    function control(selectedBox){
+    ballPosition=boxes[ranPos].position
    	if(finish==true){
    	moveBallToStartPoint()
    	let selectedPos=boxes[selectedBox].position
@@ -194,6 +195,11 @@ function hideControlImages(){
       gameOvaer.style.transitionDuration='1s';
       gameOvaer.style.transform = "scaleY(2)";
       },500);
+      setTimeout(function(){
+      ball.style.visibility = "visible"
+      moveBoxUp(boxes[ballPosition])
+
+      },1000);
 
    	}
    	finish=false
