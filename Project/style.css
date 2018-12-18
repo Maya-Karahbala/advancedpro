@@ -1,83 +1,80 @@
 .back{
-    background-image:url(Pictures/bg.png);
-    background-repeat: no-repeat;
-    background.position: center;
-    background-size: cover;
-    width:100%;
-    height:650px;
-    
+  background-image:url(Pictures/bg.png);
+  background-repeat: no-repeat;
+  background.position: center;
+  background-size: cover;
+  width:100%;
+  height:650px;
+
 }
 
 .box {
-     background-image: url(Pictures/box.png);
-     width:250px;
-     height:250px; 
-     background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% ;
-    position:  absolute;
-    margin-top: 300px; 
-    margin-left: 0px
-  }
-  .ball {
-     background-image: url(Pictures/ball.png);
-     width:100px;
-     height:100px; 
-     background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% ;
-    position:  absolute;
-    margin-top: 430px; 
-    
-  }
-  .gameOvaer  {
-    width:600px;height:200px; 
-     position:absolute ;visibility: hidden; margin-top: -230px;margin-left: 460px;
-  }
-   .youWin {
-    width:400px;height:200px; 
-     position:absolute ;visibility: hidden; margin-top: -230px;margin-left: 560px;
-  }
+ background-image: url(Pictures/box.png);
+ width:250px;
+ height:250px; 
+ background-size: contain;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: 100% ;
+ position:  absolute;
+ margin-top: 300px; 
+ margin-left: 0px
+}
+.ball {
+ background-image: url(Pictures/ball.png);
+ width:100px;
+ height:100px; 
+ background-size: contain;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: 100% ;
+ position:  absolute;
+ margin-top: 430px; 
+
+}
+.gameOvaer  {
+  width:600px;height:200px; 
+  background-size: contain;
+  visibility: hidden;
+  margin-top: -230px;
+  margin-left: 460px;
+}
+.youWin {
+  width:400px;height:200px; 
+  background-size: contain;
+  visibility: hidden; margin-top: -230px;margin-left: 560px;
+}
 
 .level1 {
   color: black; 
   border: 6px solid #4CAF50;
-
 }
 
 .level1:hover {
   background-color: #4CAF50;
-  color: white;
 }
 
 .level2 {
- 
   color: black; 
   border: 6px solid #008CBA;
 }
 
 .level2:hover {
   background-color: #008CBA;
-  color: white;
 }
 
 .level3 {
-  
   color: black; 
   border: 6px solid #f44336;
 }
 
 .level3:hover {
   background-color: #f44336;
-  color: white;
 }
 .ghost-button-thick-border {
-
   display: inline-block;
   width:250px;
-   height:30px; 
+  height:30px; 
   font-weight: bold;
   padding: 8px;
   color: #fff;
