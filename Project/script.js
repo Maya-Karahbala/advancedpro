@@ -1,5 +1,6 @@
 
 var boxes=[];
+var levels=[];
 var duration // speed of the game
 var bekleme
 var firstBox  // for controling differences when there is 3 boxes or 4 boxes
@@ -12,12 +13,16 @@ var ball=document.getElementById("ball1")
 var gameOvaer=document.getElementById("gameOvaer")
 var youWin=document.getElementById("youWin")
 
+
 // fill boxes array
 let boxName;
 for (let i = 0; i <4; i++) {
 	boxName="box"+i
 	boxes.push(document.getElementById(boxName))
 	boxes[i].position=i
+}
+for ( i = 1; i <4; i++) {
+  levels.push(document.getElementById("level"+i))
 }
 // each box has positon array to transform in the true direction
 boxes[0].boxPositions=[0,300,600,900]
@@ -67,7 +72,8 @@ function moveBallTo(position){
       multipleSwap()
     },bekleme);
    }
-   else{finish=true
+   else{
+    finish=true
     start=true
   }
 }
@@ -90,6 +96,7 @@ function hideControlImages(){
    //start the game
    function newGame(){
 // make the ball visible for one second move that box up and down then start multiple swap
+    hideButton()
    	reset()
    	setTimeout(function(){
    		ball.style.visibility = "visible"
@@ -143,9 +150,22 @@ function hideControlImages(){
       newGame()
     }
   }
-  function control(selectedBox){
-    ballPosition=boxes[ranPos].position
-    if(finish==true){
+  function hideButton(){
+    for (level of levels){
+        level.style.visibility = "hidden"
+    }
+    
+  }
+   function showButton(){
+    for (level of levels){
+        level.style.visibility = "visible"
+    }
+    
+  }
+  function control(selectedBox){ 
+    if(finish){
+       ballPosition=boxes[ranPos].position
+      finish=false
       moveBallToStartPoint()
       let selectedPos=boxes[selectedBox].position
       if(ranPos==selectedBox){
@@ -184,7 +204,7 @@ function hideControlImages(){
     },1000);
 
    }
-   finish=false
+   showButton()
  }
 
 

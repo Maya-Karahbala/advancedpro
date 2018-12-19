@@ -71,7 +71,7 @@
 .level3:hover {
   background-color: #f44336;
 }
-.ghost-button-thick-border {
+.button {
   display: inline-block;
   width:250px;
   height:30px; 
@@ -85,3 +85,4 @@
   color 0.2s ease-out;
   cursor: pointer;
 }
+
