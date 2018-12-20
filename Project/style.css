@@ -33,7 +33,7 @@
 
 }
 .gameOvaer  {
-  width:600px;height:200px; 
+  width:800px;height:100px; 
   background-size: contain;
   visibility: hidden;
   margin-top: -230px;
@@ -42,7 +42,7 @@
 .youWin {
   width:400px;height:200px; 
   background-size: contain;
-  visibility: hidden; margin-top: -230px;margin-left: 560px;
+  visibility: hidden; margin-top: -100px;margin-left: 560px;
 }
 
 .level1 {
