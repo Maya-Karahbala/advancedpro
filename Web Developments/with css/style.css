@@ -1,0 +1,22 @@
+
+button{
+        color: white;
+        background-color: black;
+        width: 70px;
+        height: 30px
+}                          
+
+h2 {
+    background: 
+         linear-gradient(to right,#2F8AAB,#A9D4E4);
+               
+    text-shadow: 10px 5px 10px 
+    
+        
+}
+h1 {
+    background: 
+         linear-gradient(#2F8AAB,#A9D4E4);
+    
+        
+}
