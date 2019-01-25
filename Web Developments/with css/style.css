@@ -20,3 +20,12 @@ h1 {
     
         
 }
+/* effect all inhereted elemnts
+ul li{
+    background-color:forestgreen;
+    color: yellow
+}*/
+ul > li{
+    background-color:forestgreen;
+    color: yellow
+}
