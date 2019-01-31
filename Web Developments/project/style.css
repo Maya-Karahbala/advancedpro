@@ -109,7 +109,7 @@ div.rightsidecol{
 }
 /*mobile*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
 ul.topnav li:not(:nth-child(1)){
         display: none;
     }
