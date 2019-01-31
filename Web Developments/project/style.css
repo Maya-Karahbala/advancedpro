@@ -75,6 +75,38 @@ ul.topnav li a{
 ul.topnav li.dropdownicon{
     display: none;
 }
+
+/*********custom*********/
+#gradient{
+ background-image: linear-gradient(	#00BFFF, #6495ED);   
+}
+h1.large{
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 300px;
+    padding-right: 0;
+}
+h1.med{
+    font-size: 30px;
+    margin-left: 80px;
+}
+input[type="text"]{
+    width: 300px;
+    min-width: 100px;
+    padding: 5px;
+}
+form h2{
+    color: #fff;
+}
+div.leftsidecol{
+   width: 50%;
+    margin-left: 30%;
+}
+div.rightsidecol{
+  margin-left: 0%;
+}
 /*mobile*/
 
 @media screen and (max-width: 600px) {
@@ -106,7 +138,12 @@ topnav.responsive li a{
    display: block;   
     text-align: left;
 }
-/*********custom*********/
-#gradient{
- background-image: linear-gradient(	#00BFFF, #6495ED);   
+
+div.leftsidecol,
+div.rightsidecol{
+    margin-left: 10%;
+}
+.col-6{
+    width: 100%;
+    margin-bottom: 10%;
 }
