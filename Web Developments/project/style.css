@@ -149,16 +149,18 @@ div.rightsidecol{
 .col-6{
     width: 100%;
     margin-bottom: 10%;
+    padding: 4px;
 }
     input[type="text"]{
     width: 250px;
         margin 0;
  
 }
-    .vidContainer iframe{
+    div.vidContainer iframe{
         position: relative;
         width: 100%;
         margin 0;
         overflow: hidden;
+        
     } 
 }
