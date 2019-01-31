@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+      <head>
+          
+          <title>
+          my first web
+          </title>
+          <link rel="stylesheet" href="style.css">
+    
+      </head>
+   
+      <body>
+     
+          <nav >
+               <ul class="topnav" id="dropdownmenu">
+              <li> <a href="#"> home</a> </li>
+              <li> <a href="#"> news</a> </li>
+              <li> <a href="#"> contact</a></li>
+             <li> <a href="#"> about</a> </li>
+                    <li class="topnav-right"> <a href="#"> Sign in</a> </li>
+                    <li class="topnav-right"> <a href="#"> Sign Up</a> </li>
+                   <!-- 
+                    Unicode Character 'TRIGRAM FOR HEAVEN' -->
+                    <li class="dropdownicon"> <a href="javascript:void(0);" onclick="dropdownMenu()"> &#9776;</a> </li>
+                   
+              </ul>
+          </nav>
+          
+          <div class="container" id="gradient">
+          
+          </div>
+         <script>
+          function dropdownMenu(){
+              var dropdownmenu1=document.getElementById("dropdownmenu");
+              if(dropdownmenu1.className==="topnav"){
+                  dropdownmenu1.className+=" responsive";
+              }
+              else{
+                 dropdownmenu1.className="topnav" ;
+              }
+          }
+          </script>
+       
+        
+         
+     
+      </body>
+</html>
+      
