@@ -27,6 +27,7 @@ body{
     display: table;
     clear: both;
     content: "";
+     margin 0;
 }
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -149,12 +150,13 @@ div.rightsidecol{
     margin-bottom: 10%;
 }
     input[type="text"]{
-    width: 300px;
+    width: 250px;
+        margin 0;
  
 }
     .vidContainer iframe{
         position: relative;
         width: 100%;
-        margin-right: 5px;
+        margin 0;
     } 
 }
