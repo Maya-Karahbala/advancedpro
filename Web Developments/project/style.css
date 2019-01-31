@@ -144,12 +144,12 @@ topnav.responsive li a{
 
 div.leftsidecol,
 div.rightsidecol{
-    margin-left: 10%;
+    margin-left: 5%;
 }
 .col-6{
     width: 100%;
     margin-bottom: 10%;
-    padding: 4px;
+    padding: 8px;
 }
     input[type="text"]{
     width: 250px;
