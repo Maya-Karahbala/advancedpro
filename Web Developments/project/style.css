@@ -90,7 +90,7 @@ h1.large{
 }
 h1.med{
     font-size: 30px;
-    margin-left: 80px;
+    margin-left: 70px;
 }
 input[type="text"]{
     width: 300px;
@@ -148,4 +148,13 @@ div.rightsidecol{
     width: 100%;
     margin-bottom: 10%;
 }
+    input[type="text"]{
+    width: 300px;
+ 
+}
+    .vidContainer iframe{
+        position: relative;
+        width: 100%;
+        margin-right: 5px;
+    } 
 }
