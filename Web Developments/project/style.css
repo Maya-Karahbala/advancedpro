@@ -109,7 +109,7 @@ div.rightsidecol{
 }
 /*mobile*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
 ul.topnav li:not(:nth-child(1)){
         display: none;
     }
@@ -118,7 +118,7 @@ display: block;
 float: right;
     }
     
-}
+
 ul.topnav.responsive
 li.dropdownicon{
     position: absolute;
@@ -146,4 +146,5 @@ div.rightsidecol{
 .col-6{
     width: 100%;
     margin-bottom: 10%;
+}
 }
