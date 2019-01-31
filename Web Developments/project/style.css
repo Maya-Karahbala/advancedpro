@@ -96,6 +96,7 @@ input[type="text"]{
     width: 300px;
     min-width: 100px;
     padding: 5px;
+    border-radius: 7px;
 }
 form h2{
     color: #fff;
@@ -109,7 +110,7 @@ div.rightsidecol{
 }
 /*mobile*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
 ul.topnav li:not(:nth-child(1)){
         display: none;
     }
