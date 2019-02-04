@@ -8,7 +8,7 @@ body{
     padding: 0;
     line-height: 1;
     margin: 0;
-    overflow: hidden;
+    
 }
 .container{
     width: 100%;
@@ -16,6 +16,7 @@ body{
     margin: auto;
     padding-top: 4%;
     padding-bottom: 4%;
+    padding: 4%;
       
 }
 .row{
@@ -110,6 +111,35 @@ div.leftsidecol{
 div.rightsidecol{
   margin-left: 0%;
 }
+/*section 2*/
+.section2Header{
+  text-align: center;  
+}
+div.box{
+    background-color: #fff;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,.15);
+    text-align: center;
+    padding: 8px;
+    
+}
+dİV.col-4{
+    padding: 5px;
+    
+}
+.icon{
+    width: 53px;
+    height: 40;
+        
+}
+.icon2{
+    width: 80px;
+    height: 70;
+    margin-bottom: 20px;
+        
+}
+.screenshoot{
+    width: 100%;
+}
 /*mobile*/
 
 @media screen and (max-width: 600px) {
@@ -146,13 +176,13 @@ div.leftsidecol,
 div.rightsidecol{
     margin-left: 5%;
 }
-.col-6{
+.col-6, .col-4{
     width: 100%;
     margin-bottom: 10%;
     padding: 8px;
 }
     input[type="text"]{
-    width: 250px;
+    width: 170%;
         margin 0;
  
 }
