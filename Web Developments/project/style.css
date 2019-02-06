@@ -235,7 +235,10 @@ div.rightsidecol{
         overflow: hidden;
         
     } 
-    .box{
-        height: 1200px; 
-    }
+    div.box{
+    
+    height: 730px;
+    
+}
+    
 }
